@@ -1,0 +1,22 @@
+{
+	"window": {
+		"screen": {
+			"width": 500,
+			"height": 200,
+			"color": "white"
+		},
+		"caption": "Game"
+	},
+
+	"graph": {
+		"steps": 20,
+		"debug": true,
+		"lineWidth": 3,
+		"TPS": 100,
+		"colors": [
+			"red",
+			"green",
+			"blue"
+		]
+	}
+}
