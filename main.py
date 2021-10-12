@@ -30,6 +30,7 @@ lx = pointer.rect.x-container.x+pointer.w/2
 ly = pointY.rect.y-container.y+pointY.h/2
 
 steps = container.w/prp['graph']['steps']
+tpsY = prp['graph']['tpsY']
 
 colorList = prp['graph']['colors']
 cc = random.choice(colorList)
@@ -53,9 +54,14 @@ while running:
 		container.clear()
 		lx = 0
 		ly = random.randint(container.y, container.y+container.h)
+		
+	if tpsY <= 1:
+		pointY.rect.y = random.randint(container.y, container.y+container.h)
+		tpsY = prp['graph']['tpsY']
+	else:
+		tpsY -= 1
 
 	if ticker <= 1:
-		pointY.rect.y = random.randint(container.y, container.y+container.h)
 
 		pygame.draw.circle(container.image, cc, (pointer.rect.x-container.x+26, pointY.rect.y-container.y+pointY.h/2), 3)
 		pygame.draw.line(container.image, cc, (lx, ly), (pointer.rect.x-container.x+26, pointY.rect.y-container.y+pointY.h/2), prp['graph']['lineWidth'])
