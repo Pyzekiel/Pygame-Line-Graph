@@ -13,6 +13,7 @@
 		"debug": true,
 		"lineWidth": 3,
 		"TPS": 100,
+		"tpsY": 200,
 		"colors": [
 			"red",
 			"green",
